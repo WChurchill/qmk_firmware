@@ -30,3 +30,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD
 
 #define EE_HANDS
+#define SPLIT_USB_DETECT

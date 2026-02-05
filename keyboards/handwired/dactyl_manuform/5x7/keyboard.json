@@ -13,10 +13,10 @@
     },
     "diode_direction": "COL2ROW",
     "split": {
-        "enabled": true,
-        "serial": {
-            "pin": "D0"
-        }
+      "enabled": true,
+      "serial": {
+        "pin": "D0" // actually "SCL" on the board
+	  }
     },
     "processor": "atmega32u4",
     "bootloader": "caterina",
