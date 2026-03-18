@@ -7,6 +7,7 @@
 #define _QWERTY 0
 #define _FN     1
 #define _NUMPAD 2
+#define _MOUSE 3
 
 // Some basic macros
 #define TASK   LCTL(LSFT(KC_ESC))
@@ -21,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_DEL,    KC_Q,    KC_W,    KC_E,   KC_R,   KC_T,   KC_LBRC,
         KC_CAPS,   KC_A,    KC_S,    KC_D,   KC_F,   KC_G,   TAB_RO,
         OSM(MOD_LSFT),KC_Z, KC_X,    KC_C,   KC_V,   KC_B,
-	               KC_CAPS, KC_LEFT, KC_RIGHT,
+                   _______, KC_LEFT, KC_RIGHT,
 		                                 KC_LCTL, KC_SPC, KC_BSPC,
 		                                 KC_LALT, KC_LGUI, MO(_NUMPAD),
         // right hand
@@ -29,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_RBRC, KC_Y,    KC_U,    KC_I,     KC_O,     KC_P,     KC_BSLS,
                       TG(_NUMPAD), KC_H,    KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
                                    KC_N,    KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,  OSM(MOD_RSFT),
-		                                             KC_UP,    KC_DOWN,  KC_RGHT,
+		                                             KC_UP,    KC_DOWN,  TG(_MOUSE),
 		KC_TAB, KC_ENT, KC_RCTL,
 		MO(_FN), KC_RGUI, KC_RALT
     ),
@@ -71,6 +72,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              _______, KC_PENT, _______,
 		     _______, _______, _______
     ),
+
+	[_MOUSE] = LAYOUT_5x7(
+        // left hand
+        _______,   _______,   _______,   _______,   _______,   _______,  _______,
+        _______,   _______,   _______,   _______,   _______,   _______,  _______,
+        _______,   _______,   MS_ACL2,   MS_ACL1,   MS_ACL0,   _______,  _______,
+        _______,   _______,   _______,   _______,   _______,   _______,
+		           _______,   _______,   _______,
+                                    _______, _______, _______,
+		                            _______, _______, _______,
+        // right hand
+		                  _______,   _______, _______, _______, _______, _______,   _______,
+		                  _______,   _______, _______, _______, _______, _______,   _______,
+        _______,   _______, MS_LEFT, MS_DOWN, MS_UP, MS_RGHT,   _______,
+		                             _______, _______, _______, _______, _______,   _______,
+		                                               _______, _______,   _______,
+		     _______, _______, _______,
+		     _______, _______, _______
+	)
 };
 
 void keyboard_post_init_user(void)
