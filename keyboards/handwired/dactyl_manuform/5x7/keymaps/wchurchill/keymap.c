@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,   _______, MS_LEFT, MS_DOWN, MS_UP, MS_RGHT,   _______,
 		                             _______, _______, _______, _______, _______,   _______,
 		                                               _______, _______,   _______,
-		     _______, _______, _______,
+		     QK_MOUSE_BUTTON_2, QK_MOUSE_BUTTON_1, _______,
 		     _______, _______, _______
 	)
 };
